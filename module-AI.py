@@ -3,11 +3,8 @@ from queue import PriorityQueue
 from Point import Point
 import math
 
-
-
-#AIModule
-
-'''AIModule Interface
+#module of AI Interface
+'''
 createPath(map map_) -> list<points>: Adds points to a path'''
 
 '''
@@ -31,10 +28,7 @@ class AIModule:
 	
   def createPath(self, map_):
 	
-			
       pass
-
-
 
 #StupidAI
 				
@@ -45,8 +39,7 @@ the target, then as far vertically as necessary to reach the target.
 It is intended primarily as a demonstration of the various pieces of the
 program.
 '''
-		
-	
+			
 class StupidAI(AIModule):
 	
 	#Creates the path to the goal 
@@ -143,8 +136,7 @@ class Djikstras(AIModule):
 						v = prev[str(v.x)+','+str(v.y)]
 						path.append(map_.getStartPoint())
 						path.reverse()
-						return path
-					
+						return path				
 					
 #AStarExp 
 
@@ -193,10 +185,7 @@ class AStarExp(AIModule):
 			path.reverse()
 			return path 
 		
-		
-		
-		
-		
+		#heuristic definition.
 		
 		#define Heuristic
 		
@@ -212,7 +201,6 @@ class AStarExp(AIModule):
 			d = max(xDistance, yDistance)
 			
 			
-			
 			if h0 > h1:
 				return math.pow(2,(h1-h0)/d)*d        #delta h = |h goal - h initial| 
 			elif h0 < h1:
@@ -225,20 +213,12 @@ class AStarExp(AIModule):
 			return 2*(h1-h0)+max(0,d-(h1-h0))
 		return max(xDistance, yDistance)
 	
-	
 	pass
-	
-	
-	
-	
-	
-	
 	
 	
 #AStarDiv 
 	
 class AStarDiv(AIModule):
-	
 	
 #create a path 
 	
@@ -282,9 +262,6 @@ class AStarDiv(AIModule):
 			path.reverse()
 			return path 
 	
-	
-	
-	
 	#define heuristic
 	
 def getHeuristic(self, map_,Node):
@@ -303,11 +280,6 @@ def getHeuristic(self, map_,Node):
 	return max((d-v)/2,0)
 
 pass 
-
-
-
-
-
 
 #AStarMSH
 			
@@ -391,79 +363,5 @@ def getHeuristic(self, map_,Node):
 				h_n = ((height %d)*pow(2,-1*ceil(height/d)))+((d-(height%d))*pow(2,-1*floor(height/d)))
 				return h_n 
 			pass
-				
-				
-				
-				
-			
-
-						
-						
-
-								
-								
-								
-								
-					
-					
-			
-						
-							
-							
-						
-						
-					
-				
-				
-				
-				
-		
-		
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 		
