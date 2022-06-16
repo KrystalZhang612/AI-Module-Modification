@@ -1,5 +1,5 @@
 # AI-Module-Modification
-An AI modification in Python. 
+An AI modification in Python. <br/>
 The first is in relation to the exponential heuristic when moving up. 
 which implicitly assumes that the best possible path exists on the most direct route, as assumption which does not hold up to scrutiny.
 This can overestimate when delta_h/distance > 1. Consider the following minimal counterexample:
